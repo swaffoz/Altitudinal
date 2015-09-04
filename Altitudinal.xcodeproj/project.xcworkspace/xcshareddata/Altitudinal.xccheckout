@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0FCAE799-8A85-4540-96D1-D74CA502EE37</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Altitudinal</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>715E733494A21395C7D5E6B9A7C00BD5665BB179</key>
+		<string>bitbucket.org:zswafford/altimeter.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Altitudinal.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>715E733494A21395C7D5E6B9A7C00BD5665BB179</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>bitbucket.org:zswafford/altimeter.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>715E733494A21395C7D5E6B9A7C00BD5665BB179</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>715E733494A21395C7D5E6B9A7C00BD5665BB179</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Altimeter</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kgh-8S-1SB">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="norwester.otf">
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+            <string>Norwester-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--Altimeter View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AltimeterViewController" customModule="Altitudinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ybw-gv-RZr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TuB-Pf-GCl" userLabel="Gradient View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOa-LQ-pOY" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="-8" y="300" width="608" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-12-trx" userLabel="DataView">
+                                <rect key="frame" x="222" y="38" width="156" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lws-vE-YjT" userLabel="Data Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" id="OoK-Zu-6Ch"/>
+                                            <constraint firstAttribute="height" constant="60" id="ouW-uY-qKS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="64"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLY-IN-27j" userLabel="MoE Label">
+                                        <rect key="frame" x="132" y="8" width="0.0" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="KuY-RT-Sjt"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" id="kCL-bS-uZe"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="n9f-GJ-xTf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="13"/>
+                                        <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="n9f-GJ-xTf"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEj-s5-aS7" userLabel="Unit Label">
+                                        <rect key="frame" x="132" y="54" width="0.0" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" id="7X6-7X-SUm"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="4" id="Jb0-oj-rzT"/>
+                                            <constraint firstAttribute="height" constant="26" id="Nr9-Zo-vNV"/>
+                                            <constraint firstAttribute="height" constant="29" id="XHZ-Kd-MkA"/>
+                                            <constraint firstAttribute="height" constant="40" id="XID-0M-7TM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="24"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="7X6-7X-SUm"/>
+                                                <exclude reference="Jb0-oj-rzT"/>
+                                                <exclude reference="Nr9-Zo-vNV"/>
+                                                <exclude reference="XID-0M-7TM"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="NEj-s5-aS7" firstAttribute="width" secondItem="oLY-IN-27j" secondAttribute="width" id="0PQ-uU-qnJ"/>
+                                    <constraint firstItem="NEj-s5-aS7" firstAttribute="width" secondItem="oLY-IN-27j" secondAttribute="width" id="0e5-eA-MuZ"/>
+                                    <constraint firstItem="Lws-vE-YjT" firstAttribute="leading" secondItem="bcO-12-trx" secondAttribute="leading" id="1Ao-eV-eHp"/>
+                                    <constraint firstAttribute="trailing" secondItem="oLY-IN-27j" secondAttribute="trailing" id="3fv-S6-Y8c"/>
+                                    <constraint firstItem="oLY-IN-27j" firstAttribute="leading" secondItem="Lws-vE-YjT" secondAttribute="trailing" constant="4" id="8o6-9s-fbK"/>
+                                    <constraint firstItem="oLY-IN-27j" firstAttribute="top" secondItem="bcO-12-trx" secondAttribute="top" constant="8" id="AfY-Ul-hze"/>
+                                    <constraint firstItem="NEj-s5-aS7" firstAttribute="leading" secondItem="Lws-vE-YjT" secondAttribute="trailing" constant="4" id="Yaj-ZY-mWZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="NEj-s5-aS7" secondAttribute="trailing" id="bp9-KM-frD"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="fXL-FW-ukc"/>
+                                    <constraint firstAttribute="bottom" secondItem="NEj-s5-aS7" secondAttribute="bottom" constant="6" id="iX5-Fs-Ybh"/>
+                                    <constraint firstItem="oLY-IN-27j" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bcO-12-trx" secondAttribute="top" constant="8" id="lLg-ul-dcZ"/>
+                                    <constraint firstItem="Lws-vE-YjT" firstAttribute="top" secondItem="bcO-12-trx" secondAttribute="top" id="mbG-ZX-bDc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lws-vE-YjT" secondAttribute="bottom" id="osW-lh-BOt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="ttf-3F-UZf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lLg-ul-dcZ"/>
+                                        <exclude reference="0PQ-uU-qnJ"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6y-91-kSr" userLabel="above sea level">
+                                <rect key="frame" x="240" y="106" width="120" height="21"/>
+                                <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBF-Oa-ogY">
+                                <rect key="frame" x="16" y="32" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Unf-9d-wXs"/>
+                                    <constraint firstAttribute="width" secondItem="gBF-Oa-ogY" secondAttribute="height" multiplier="1:1" id="wBA-3x-D8Z"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="16" maxX="32" maxY="16"/>
+                                <state key="normal" image="gear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xeC-Ei-YCV" kind="show" id="pGq-3W-IFD"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location is turned off for this app.  We can't find your altitude without it. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dd-0f-YuG">
+                                <rect key="frame" x="158" y="214" width="284" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="Lpr-ZT-RZh"/>
+                                    <constraint firstAttribute="width" constant="284" id="fR6-Qb-dTp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTK-Ii-Y3d">
+                                <rect key="frame" x="200" y="303" width="200" height="60"/>
+                                <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="9E4-WQ-lTN"/>
+                                    <constraint firstAttribute="width" constant="200" id="dPO-t7-g14"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="24"/>
+                                <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" title="Enable Location">
+                                    <color key="titleColor" red="0.33882103609999997" green="0.95714785449999995" blue="0.117481718" alpha="0.56000000000000005" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTouchUpInsideErrorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R6F-S6-Ere"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OH NO!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaB-4Z-jjU">
+                                <rect key="frame" x="158" y="162" width="284" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="6mt-Q9-kXF"/>
+                                    <constraint firstAttribute="width" constant="284" id="aO8-50-Gsf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xOa-LQ-pOY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-8" id="08f-0b-dpQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TuB-Pf-GCl" secondAttribute="bottom" id="0WW-sB-F9S"/>
+                            <constraint firstAttribute="centerX" secondItem="PTK-Ii-Y3d" secondAttribute="centerX" id="34O-80-Mt7"/>
+                            <constraint firstAttribute="centerY" secondItem="TuB-Pf-GCl" secondAttribute="centerY" id="4Rp-Qc-25F"/>
+                            <constraint firstAttribute="centerX" secondItem="TuB-Pf-GCl" secondAttribute="centerX" id="54g-MX-EZj"/>
+                            <constraint firstAttribute="width" secondItem="TuB-Pf-GCl" secondAttribute="width" id="6ea-Gd-HRZ"/>
+                            <constraint firstAttribute="bottom" secondItem="xOa-LQ-pOY" secondAttribute="bottom" id="6pp-TS-MBL"/>
+                            <constraint firstAttribute="centerX" secondItem="bcO-12-trx" secondAttribute="centerX" id="9aP-gJ-tqp"/>
+                            <constraint firstItem="r6y-91-kSr" firstAttribute="top" secondItem="bcO-12-trx" secondAttribute="bottom" constant="8" id="GR8-vF-oGo"/>
+                            <constraint firstAttribute="trailing" secondItem="Ybw-gv-RZr" secondAttribute="trailing" id="H8m-3s-LTZ"/>
+                            <constraint firstItem="TuB-Pf-GCl" firstAttribute="top" secondItem="r6y-91-kSr" secondAttribute="bottom" id="Kaw-pc-3Vi"/>
+                            <constraint firstAttribute="height" secondItem="TuB-Pf-GCl" secondAttribute="height" id="MQ1-fC-cxT"/>
+                            <constraint firstItem="bcO-12-trx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="MQL-QM-3Te"/>
+                            <constraint firstItem="Ybw-gv-RZr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O6b-PB-w1Y"/>
+                            <constraint firstAttribute="centerX" secondItem="3Dd-0f-YuG" secondAttribute="centerX" id="SIE-6g-7Ge"/>
+                            <constraint firstAttribute="height" secondItem="xOa-LQ-pOY" secondAttribute="height" multiplier="2" id="SbR-lL-zLU"/>
+                            <constraint firstItem="gBF-Oa-ogY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="12" id="Tpk-9e-izc"/>
+                            <constraint firstAttribute="trailing" secondItem="xOa-LQ-pOY" secondAttribute="trailing" id="W97-xg-Fe5"/>
+                            <constraint firstItem="bcO-12-trx" firstAttribute="top" secondItem="jaB-4Z-jjU" secondAttribute="bottom" constant="18" id="Wb5-tJ-46D"/>
+                            <constraint firstItem="gBF-Oa-ogY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Z1U-8l-ccL"/>
+                            <constraint firstAttribute="centerX" secondItem="jaB-4Z-jjU" secondAttribute="centerX" id="atY-UV-p1r"/>
+                            <constraint firstItem="TuB-Pf-GCl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="azd-NN-8GK"/>
+                            <constraint firstItem="gBF-Oa-ogY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="b0d-Hd-KFV"/>
+                            <constraint firstItem="3Dd-0f-YuG" firstAttribute="top" secondItem="jaB-4Z-jjU" secondAttribute="bottom" constant="20" id="bE9-Ua-XAx"/>
+                            <constraint firstItem="gBF-Oa-ogY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="eHv-GG-g5d"/>
+                            <constraint firstItem="Ybw-gv-RZr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fqO-Hb-aFI"/>
+                            <constraint firstAttribute="centerX" secondItem="r6y-91-kSr" secondAttribute="centerX" id="gcM-3e-MHP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TuB-Pf-GCl" secondAttribute="trailing" id="lNU-dH-rPM"/>
+                            <constraint firstItem="bcO-12-trx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="18" id="qPT-Ds-q2c"/>
+                            <constraint firstItem="gBF-Oa-ogY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sPY-Bq-h20"/>
+                            <constraint firstAttribute="centerY" secondItem="PTK-Ii-Y3d" secondAttribute="centerY" multiplier="0.9" id="tOY-fy-a3C"/>
+                            <constraint firstItem="PTK-Ii-Y3d" firstAttribute="top" secondItem="3Dd-0f-YuG" secondAttribute="bottom" constant="20" id="toh-cw-wOO"/>
+                            <constraint firstAttribute="centerY" secondItem="bcO-12-trx" secondAttribute="centerY" multiplier="1.2" id="urp-6R-wl0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ybw-gv-RZr" secondAttribute="bottom" id="wPt-LQ-z5I"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Kaw-pc-3Vi"/>
+                                <exclude reference="azd-NN-8GK"/>
+                                <exclude reference="lNU-dH-rPM"/>
+                                <exclude reference="b0d-Hd-KFV"/>
+                                <exclude reference="eHv-GG-g5d"/>
+                                <exclude reference="sPY-Bq-h20"/>
+                                <exclude reference="Wb5-tJ-46D"/>
+                                <exclude reference="qPT-Ds-q2c"/>
+                                <exclude reference="urp-6R-wl0"/>
+                                <exclude reference="0WW-sB-F9S"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="wdf-b6-k02"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="accessoryLabel" destination="r6y-91-kSr" id="q4n-5J-JQM"/>
+                        <outlet property="backgroundImageView" destination="Ybw-gv-RZr" id="PkR-TT-2l1"/>
+                        <outlet property="chartView" destination="xOa-LQ-pOY" id="mQ8-G8-VZx"/>
+                        <outlet property="chartViewLeadingSpace" destination="08f-0b-dpQ" id="k7W-Z5-VQm"/>
+                        <outlet property="chartViewTrailingSpace" destination="W97-xg-Fe5" id="bQe-xs-f4c"/>
+                        <outlet property="chartViewVerticalTrailingSpace" destination="6pp-TS-MBL" id="jhQ-Ub-XFB"/>
+                        <outlet property="dataLabel" destination="Lws-vE-YjT" id="8zS-5t-nzb"/>
+                        <outlet property="dataView" destination="bcO-12-trx" id="3PG-KC-beQ"/>
+                        <outlet property="dataViewCenterYAlignment" destination="urp-6R-wl0" id="5wi-41-dPY"/>
+                        <outlet property="dataViewVerticalLeadingSpace" destination="MQL-QM-3Te" id="NjK-km-rib"/>
+                        <outlet property="errorButton" destination="PTK-Ii-Y3d" id="uwt-et-lBm"/>
+                        <outlet property="errorMessageLabel" destination="3Dd-0f-YuG" id="Oyd-Dc-EHn"/>
+                        <outlet property="errorTitleLabel" destination="jaB-4Z-jjU" id="c2m-Xg-n1u"/>
+                        <outlet property="gradientView" destination="TuB-Pf-GCl" id="JiZ-jD-Bg6"/>
+                        <outlet property="marginOfErrorLabel" destination="oLY-IN-27j" id="mqU-Cz-SQd"/>
+                        <outlet property="unitLabel" destination="NEj-s5-aS7" id="LpY-qA-FVD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1264" y="289"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="LE6-gM-Z2g">
+            <objects>
+                <tableViewController id="xeC-Ei-YCV" customClass="SettingsViewController" customModule="Altitudinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="rfb-2C-azB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection id="1YI-dN-s8K">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="5Vb-ew-Yxn">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Vb-ew-Yxn" id="RB3-P4-6hl">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Units" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58U-IL-CFt">
+                                                    <rect key="frame" x="8" y="8" width="180" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="180" id="ho1-nB-nGq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTI-6V-elX">
+                                                    <rect key="frame" x="508" y="0.0" width="100" height="43"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMT-Lo-Imi" customClass="UnitsButton" customModule="Altitudinal" customModuleProvider="target">
+                                                    <rect key="frame" x="508" y="0.0" width="100" height="43"/>
+                                                    <color key="backgroundColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="be3-2m-nV1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="15"/>
+                                                    <state key="normal" title="feet">
+                                                        <color key="titleColor" red="0.0" green="1" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="didTouchUpInsideUnitsButton:" destination="xeC-Ei-YCV" eventType="touchUpInside" id="LCk-Lj-c2y"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="VTI-6V-elX" firstAttribute="height" secondItem="KMT-Lo-Imi" secondAttribute="height" id="5wH-2g-I3l"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KMT-Lo-Imi" secondAttribute="trailing" constant="-16" id="JAk-21-Nbd"/>
+                                                <constraint firstItem="VTI-6V-elX" firstAttribute="leading" secondItem="KMT-Lo-Imi" secondAttribute="leading" id="PsT-fh-yB6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="58U-IL-CFt" secondAttribute="bottom" id="Qru-OM-orv"/>
+                                                <constraint firstItem="KMT-Lo-Imi" firstAttribute="trailing" secondItem="RB3-P4-6hl" secondAttribute="trailingMargin" id="Uaq-5Y-8bD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KMT-Lo-Imi" secondAttribute="bottom" id="aYp-rl-G0o"/>
+                                                <constraint firstItem="VTI-6V-elX" firstAttribute="width" secondItem="KMT-Lo-Imi" secondAttribute="width" id="dWN-Li-nSD"/>
+                                                <constraint firstItem="KMT-Lo-Imi" firstAttribute="top" secondItem="RB3-P4-6hl" secondAttribute="topMargin" id="i4p-lH-lW1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="KMT-Lo-Imi" secondAttribute="bottom" constant="-8" id="lih-lZ-wfP"/>
+                                                <constraint firstItem="VTI-6V-elX" firstAttribute="top" secondItem="KMT-Lo-Imi" secondAttribute="top" id="prM-P0-vbN"/>
+                                                <constraint firstItem="KMT-Lo-Imi" firstAttribute="top" secondItem="RB3-P4-6hl" secondAttribute="topMargin" constant="-8" id="smK-xg-SXV"/>
+                                                <constraint firstItem="58U-IL-CFt" firstAttribute="leading" secondItem="RB3-P4-6hl" secondAttribute="leadingMargin" id="xx5-4x-loH"/>
+                                                <constraint firstItem="58U-IL-CFt" firstAttribute="top" secondItem="RB3-P4-6hl" secondAttribute="topMargin" id="y53-LH-9ya"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Uaq-5Y-8bD"/>
+                                                    <exclude reference="aYp-rl-G0o"/>
+                                                    <exclude reference="i4p-lH-lW1"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="TYA-gD-n8Y">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="c7P-1d-iwb">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c7P-1d-iwb" id="3yb-4w-vJX">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Graph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBP-ZI-yrx">
+                                                    <rect key="frame" x="8" y="8" width="180" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="180" id="4O2-wD-ePf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TmI-VR-IYX">
+                                                    <rect key="frame" x="543" y="8" width="51" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="49" id="0n0-HZ-qTz"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="didChangeShowGraphSwitch:" destination="xeC-Ei-YCV" eventType="valueChanged" id="Oxf-KS-QIo"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="TmI-VR-IYX" firstAttribute="trailing" secondItem="3yb-4w-vJX" secondAttribute="trailingMargin" id="6K8-Nf-Yai"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TmI-VR-IYX" secondAttribute="bottom" id="CZg-lA-TEn"/>
+                                                <constraint firstItem="dBP-ZI-yrx" firstAttribute="leading" secondItem="3yb-4w-vJX" secondAttribute="leadingMargin" id="VWb-cl-anP"/>
+                                                <constraint firstItem="TmI-VR-IYX" firstAttribute="top" secondItem="3yb-4w-vJX" secondAttribute="topMargin" id="hd2-h5-2Wh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dBP-ZI-yrx" secondAttribute="bottom" id="zM2-yK-CXg"/>
+                                                <constraint firstItem="dBP-ZI-yrx" firstAttribute="top" secondItem="3yb-4w-vJX" secondAttribute="topMargin" id="zZg-Tc-Lgd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="6hg-ma-cco">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6hg-ma-cco" id="h2D-a5-Yy5">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Axis Labels" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtk-z1-ofq">
+                                                    <rect key="frame" x="8" y="8" width="180" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="180" id="GOF-8d-RIw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oEg-Z8-uLv">
+                                                    <rect key="frame" x="543" y="8" width="51" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="49" id="PjE-Xt-r8a"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="didChangeShowLabelsSwitch:" destination="xeC-Ei-YCV" eventType="valueChanged" id="H9Z-yY-pvI"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="dtk-z1-ofq" firstAttribute="top" secondItem="h2D-a5-Yy5" secondAttribute="topMargin" id="AxL-Y7-MoT"/>
+                                                <constraint firstItem="oEg-Z8-uLv" firstAttribute="bottom" secondItem="h2D-a5-Yy5" secondAttribute="bottomMargin" id="LOq-K6-0ta"/>
+                                                <constraint firstItem="oEg-Z8-uLv" firstAttribute="trailing" secondItem="h2D-a5-Yy5" secondAttribute="trailingMargin" id="Ngk-zT-ThS"/>
+                                                <constraint firstItem="oEg-Z8-uLv" firstAttribute="top" secondItem="h2D-a5-Yy5" secondAttribute="topMargin" id="n64-Hv-JXV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dtk-z1-ofq" secondAttribute="bottom" id="pZA-wh-0RF"/>
+                                                <constraint firstItem="dtk-z1-ofq" firstAttribute="leading" secondItem="h2D-a5-Yy5" secondAttribute="leadingMargin" id="ucM-Z1-oCZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="Ngr-75-Hab">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="17i-3S-YyD">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="17i-3S-YyD" id="vfB-Gj-pod">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Legal Information and what-not" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQH-8t-umF">
+                                                    <rect key="frame" x="8" y="8" width="260" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="260" id="7ZQ-BP-1cB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="ZQH-8t-umF" firstAttribute="leading" secondItem="vfB-Gj-pod" secondAttribute="leadingMargin" id="1jh-Fl-YJZ"/>
+                                                <constraint firstItem="ZQH-8t-umF" firstAttribute="top" secondItem="vfB-Gj-pod" secondAttribute="topMargin" id="RhP-ET-Arc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZQH-8t-umF" secondAttribute="bottom" id="g8m-lJ-ce2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="U54-M1-QUu" kind="show" id="pKO-DI-loo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="SvE-Dg-mQA">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="mrP-2r-5H1">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mrP-2r-5H1" id="vvI-4d-0Ad">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="made with ❤︎ in kansas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TT0-eR-zkr">
+                                                    <rect key="frame" x="8" y="8" width="584" height="27"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="Norwester-Regular" family="Norwester" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="TT0-eR-zkr" firstAttribute="leading" secondItem="vvI-4d-0Ad" secondAttribute="leadingMargin" id="TrT-Fw-xsq"/>
+                                                <constraint firstItem="TT0-eR-zkr" firstAttribute="top" secondItem="vvI-4d-0Ad" secondAttribute="topMargin" id="f95-NI-0cv"/>
+                                                <constraint firstItem="TT0-eR-zkr" firstAttribute="trailing" secondItem="vvI-4d-0Ad" secondAttribute="trailingMargin" id="tpF-md-7Ej"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TT0-eR-zkr" secondAttribute="bottom" id="xeR-8E-q29"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="xeC-Ei-YCV" id="9dk-6V-Qyi"/>
+                            <outlet property="delegate" destination="xeC-Ei-YCV" id="XRm-Sv-drP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="tde-PE-EDI"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="heartTableViewCell" destination="mrP-2r-5H1" id="bzh-kN-CaR"/>
+                        <outlet property="showGraphSwitch" destination="TmI-VR-IYX" id="xPj-CR-ZEi"/>
+                        <outlet property="showLabelsSwitch" destination="oEg-Z8-uLv" id="EA8-ds-0H3"/>
+                        <outlet property="showLabelsTableViewCell" destination="6hg-ma-cco" id="nRq-90-9cP"/>
+                        <outlet property="unitsButton" destination="KMT-Lo-Imi" id="wFi-Gv-srL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYZ-j7-O6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2024" y="289"/>
+        </scene>
+        <!--Legal Information-->
+        <scene sceneID="SZB-t8-4WL">
+            <objects>
+                <viewController id="U54-M1-QUu" customClass="LegalViewController" customModule="Altitudinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qP5-pm-zR9"/>
+                        <viewControllerLayoutGuide type="bottom" id="ONt-JU-qSm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2fa-mo-2JS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SGB-3F-TSy">
+                                <rect key="frame" x="16" y="64" width="568" height="536"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Altitudinal
+© Zane Swafford 2015</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Altitudinal">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" includes open-source components from ">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ios-charts ">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="by ">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Daniel Gindi ">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">under the Apache License.
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Altitudinal">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" uses the ">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Norwester">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> font under the SIL Open Font License
+
+___________________________________________________________
+
+If you would like to read the license for </string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ios-charts">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">, here you go:
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. Definitions.
+
+"License" shall mean the terms and conditions for use, reproduction,
+and distribution as defined by Sections 1 through 9 of this document.
+
+"Licensor" shall mean the copyright owner or entity authorized by
+the copyright owner that is granting the License.
+
+"Legal Entity" shall mean the union of the acting entity and all
+other entities that control, are controlled by, or are under common
+control with that entity. For the purposes of this definition,
+"control" means (i) the power, direct or indirect, to cause the
+direction or management of such entity, whether by contract or
+otherwise, or (ii) ownership of fifty percent (50%) or more of the
+outstanding shares, or (iii) beneficial ownership of such entity.
+
+"You" (or "Your") shall mean an individual or Legal Entity
+exercising permissions granted by this License.
+
+"Source" form shall mean the preferred form for making modifications,
+including but not limited to software source code, documentation
+source, and configuration files.
+
+"Object" form shall mean any form resulting from mechanical
+transformation or translation of a Source form, including but
+not limited to compiled object code, generated documentation,
+and conversions to other media types.
+
+"Work" shall mean the work of authorship, whether in Source or
+Object form, made available under the License, as indicated by a
+copyright notice that is included in or attached to the work
+(an example is provided in the Appendix below).
+
+"Derivative Works" shall mean any work, whether in Source or Object
+form, that is based on (or derived from) the Work and for which the
+editorial revisions, annotations, elaborations, or other modifications
+represent, as a whole, an original work of authorship. For the purposes
+of this License, Derivative Works shall not include works that remain
+separable from, or merely link (or bind by name) to the interfaces of,
+the Work and Derivative Works thereof.
+
+"Contribution" shall mean any work of authorship, including
+the original version of the Work and any modifications or additions
+to that Work or Derivative Works thereof, that is intentionally
+submitted to Licensor for inclusion in the Work by the copyright owner
+or by an individual or Legal Entity authorized to submit on behalf of
+the copyright owner. For the purposes of this definition, "submitted"
+means any form of electronic, verbal, or written communication sent
+to the Licensor or its representatives, including but not limited to
+communication on electronic mailing lists, source code control systems,
+and issue tracking systems that are managed by, or on behalf of, the
+Licensor for the purpose of discussing and improving the Work, but
+excluding communication that is conspicuously marked or otherwise
+designated in writing by the copyright owner as "Not a Contribution."
+
+"Contributor" shall mean Licensor and any individual or Legal Entity
+on behalf of whom a Contribution has been received by Licensor and
+subsequently incorporated within the Work.
+
+2. Grant of Copyright License. Subject to the terms and conditions of
+this License, each Contributor hereby grants to You a perpetual,
+worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+copyright license to reproduce, prepare Derivative Works of,
+publicly display, publicly perform, sublicense, and distribute the
+Work and such Derivative Works in Source or Object form.
+
+3. Grant of Patent License. Subject to the terms and conditions of
+this License, each Contributor hereby grants to You a perpetual,
+worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+(except as stated in this section) patent license to make, have made,
+use, offer to sell, sell, import, and otherwise transfer the Work,
+where such license applies only to those patent claims licensable
+by such Contributor that are necessarily infringed by their
+Contribution(s) alone or by combination of their Contribution(s)
+with the Work to which such Contribution(s) was submitted. If You
+institute patent litigation against any entity (including a
+cross-claim or counterclaim in a lawsuit) alleging that the Work
+or a Contribution incorporated within the Work constitutes direct
+or contributory patent infringement, then any patent licenses
+granted to You under this License for that Work shall terminate
+as of the date such litigation is filed.
+
+4. Redistribution. You may reproduce and distribute copies of the
+Work or Derivative Works thereof in any medium, with or without
+modifications, and in Source or Object form, provided that You
+meet the following conditions:
+
+(a) You must give any other recipients of the Work or
+Derivative Works a copy of this License; and
+
+(b) You must cause any modified files to carry prominent notices
+stating that You changed the files; and
+
+(c) You must retain, in the Source form of any Derivative Works
+that You distribute, all copyright, patent, trademark, and
+attribution notices from the Source form of the Work,
+excluding those notices that do not pertain to any part of
+the Derivative Works; and
+
+(d) If the Work includes a "NOTICE" text file as part of its
+distribution, then any Derivative Works that You distribute must
+include a readable copy of the attribution notices contained
+within such NOTICE file, excluding those notices that do not
+pertain to any part of the Derivative Works, in at least one
+of the following places: within a NOTICE text file distributed
+as part of the Derivative Works; within the Source form or
+documentation, if provided along with the Derivative Works; or,
+within a display generated by the Derivative Works, if and
+wherever such third-party notices normally appear. The contents
+of the NOTICE file are for informational purposes only and
+do not modify the License. You may add Your own attribution
+notices within Derivative Works that You distribute, alongside
+or as an addendum to the NOTICE text from the Work, provided
+that such additional attribution notices cannot be construed
+as modifying the License.
+
+You may add Your own copyright statement to Your modifications and
+may provide additional or different license terms and conditions
+for use, reproduction, or distribution of Your modifications, or
+for any such Derivative Works as a whole, provided Your use,
+reproduction, and distribution of the Work otherwise complies with
+the conditions stated in this License.
+
+5. Submission of Contributions. Unless You explicitly state otherwise,
+any Contribution intentionally submitted for inclusion in the Work
+by You to the Licensor shall be under the terms and conditions of
+this License, without any additional terms or conditions.
+Notwithstanding the above, nothing herein shall supersede or modify
+the terms of any separate license agreement you may have executed
+with Licensor regarding such Contributions.
+
+6. Trademarks. This License does not grant permission to use the trade
+names, trademarks, service marks, or product names of the Licensor,
+except as required for reasonable and customary use in describing the
+origin of the Work and reproducing the content of the NOTICE file.
+
+7. Disclaimer of Warranty. Unless required by applicable law or
+agreed to in writing, Licensor provides the Work (and each
+Contributor provides its Contributions) on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+implied, including, without limitation, any warranties or conditions
+of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+PARTICULAR PURPOSE. You are solely responsible for determining the
+appropriateness of using or redistributing the Work and assume any
+risks associated with Your exercise of permissions under this License.
+
+8. Limitation of Liability. In no event and under no legal theory,
+whether in tort (including negligence), contract, or otherwise,
+unless required by applicable law (such as deliberate and grossly
+negligent acts) or agreed to in writing, shall any Contributor be
+liable to You for damages, including any direct, indirect, special,
+incidental, or consequential damages of any character arising as a
+result of this License or out of the use or inability to use the
+Work (including but not limited to damages for loss of goodwill,
+work stoppage, computer failure or malfunction, or any and all
+other commercial damages or losses), even if such Contributor
+has been advised of the possibility of such damages.
+
+9. Accepting Warranty or Additional Liability. While redistributing
+the Work or Derivative Works thereof, You may choose to offer,
+and charge a fee for, acceptance of support, warranty, indemnity,
+or other liability obligations and/or rights consistent with this
+License. However, in accepting such obligations, You may act only
+on Your own behalf and on Your sole responsibility, not on behalf
+of any other Contributor, and only if You agree to indemnify,
+defend, and hold each Contributor harmless for any liability
+incurred by, or claims asserted against, such Contributor by reason
+of your accepting any such warranty or additional liability.
+
+END OF TERMS AND CONDITIONS
+
+APPENDIX: How to apply the Apache License to your work.
+
+To apply the Apache License to your work, attach the following
+boilerplate notice, with the fields enclosed by brackets "{}"
+replaced with your own identifying information. (Don't include
+the brackets!)  The text should be enclosed in the appropriate
+comment syntax for the file format. We also recommend that a
+file or class name and description of purpose be included on the
+same "printed page" as the copyright notice for easier
+identification within third-party archives.
+
+Copyright {yyyy} {name of copyright owner}
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">___________________________________________________________
+
+If you would like to read the license for </string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Norwester">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">, here you go:
+
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="36"/>
+                                                    <textTab alignment="left" location="72"/>
+                                                    <textTab alignment="left" location="108"/>
+                                                    <textTab alignment="left" location="144"/>
+                                                    <textTab alignment="left" location="180"/>
+                                                    <textTab alignment="left" location="216"/>
+                                                    <textTab alignment="left" location="252"/>
+                                                    <textTab alignment="left" location="288"/>
+                                                    <textTab alignment="left" location="324"/>
+                                                    <textTab alignment="left" location="360"/>
+                                                    <textTab alignment="left" location="396"/>
+                                                    <textTab alignment="left" location="432"/>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">Copyright (c) October 14, 2013 Jamie Wilson (jamiewilson.io), with Reserved Font Name Norwester.
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at: </string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="http://scripts.sil.org/OFL">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <url key="NSLink" string="http://scripts.sil.org/OFL"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+—————————————————————————————-
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+—————————————————————————————-
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide development of collaborative font projects, to support the font creation efforts of academic and linguistic communities, and to provide a free and open framework in which fonts may be shared and improved in partnership with others.
+The OFL allows the licensed fonts to be used, studied, modified and redistributed freely as long as they are not sold by themselves. The fonts, including any derivative works, can be bundled, embedded, redistributed and/or sold with any software provided that any reserved names are not used by derivative works. The fonts and derivatives, however, cannot be released under any other type of license. The requirement for fonts to remain under this license does not apply to any document created using the fonts or their derivatives.
+DEFINITIONS
+“Font Software” refers to the set of files released by the Copyright Holder(s) under this license and clearly marked as such. This may include source files, build scripts and documentation.
+“Reserved Font Name” refers to any names specified as such after the copyright statement(s).
+“Original Version” refers to the collection of Font Software components as distributed by the Copyright Holder(s).
+“Modified Version” refers to any derivative made by adding to, deleting, or substituting—in part or in whole—any of the components of the Original Version, by changing formats or by porting the Font Software to a new environment.
+“Author” refers to any designer, engineer, programmer, technical writer or other person who contributed to the Font Software.
+PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Font Software, to use, study, copy, merge, embed, modify, redistribute, and sell modified and unmodified copies of the Font Software, subject to the following conditions:
+1) Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself.
+2) Original or Modified Versions of the Font Software may be bundled, redistributed and/or sold with any software, provided that each copy contains the above copyright notice and this license. These can be included either as stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files as long as those fields can be easily viewed by the user.
+3) No Modified Version of the Font Software may use the Reserved Font Name(s) unless explicit written permission is granted by the corresponding Copyright Holder. This restriction only applies to the primary font name as presented to the users.
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote, endorse or advertise any Modified Version, except to acknowledge the contribution(s) of the Copyright Holder(s) and the Author(s) or with their explicit written permission.
+5) The Font Software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created using the Font Software.
+TERMINATION
+This license becomes null and void if any of the above conditions are not met.
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="11" name="HelveticaNeue"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="SGB-3F-TSy" secondAttribute="trailing" id="IBd-Yx-Y7w"/>
+                            <constraint firstItem="ONt-JU-qSm" firstAttribute="top" secondItem="SGB-3F-TSy" secondAttribute="bottom" id="JCM-iP-xOc"/>
+                            <constraint firstItem="SGB-3F-TSy" firstAttribute="top" secondItem="qP5-pm-zR9" secondAttribute="bottom" id="eSo-LZ-OFC"/>
+                            <constraint firstItem="SGB-3F-TSy" firstAttribute="leading" secondItem="2fa-mo-2JS" secondAttribute="leadingMargin" id="rOh-0h-8yC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Legal Information" id="SSy-kk-rbE"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="legalTextView" destination="SGB-3F-TSy" id="OmP-6i-iAi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E50-Pj-iap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2767" y="289"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GCe-FV-MT6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kgh-8S-1SB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uPO-Ld-vTo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8mD-dI-i8r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wji-uX-dyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="494" y="289"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gear" width="200" height="200"/>
+    </resources>
+</document>
